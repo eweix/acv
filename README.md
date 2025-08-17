@@ -2,9 +2,9 @@
 
 <div align="center">Version 0.1.0</div>
 
-A resume/curriculum vitae package geared towards
+A resume/curriculum vitae package geared towards the physical sciences and research-based careers.
 
-Modified from [guided-resume-starter-cgc][cgc].
+Originally modified from [guided-resume-starter-cgc][cgc].
 
 [cgc]: https://typst.app/universe/package/guided-resume-starter-cgc
 
