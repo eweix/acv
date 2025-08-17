@@ -1,0 +1,29 @@
+[package]
+name = "acv"
+version = "0.1.0"
+entrypoint = "src/lib.typ"
+authors = ["Elliott Weix"]
+license = "Unlicense"
+description = "An academic CV package in the ACS style"
+homepage = "https://github.com/eweix/acv"
+repository = "https://github.com/eweix/acv"
+keywords = ["cv"]
+categories = []
+disciplines = []
+# compiler = ""
+exclude = [
+  ".github",
+  "docs",
+  "scripts",
+  "tests",
+  ".typstignore",
+  "Justfile",
+]
+
+# [template]
+# path = "template"
+# entrypoint = "main.typ"
+# thumbnail = "thumbnail.png"
+
+# [tool.mytool]
+# foo = "bar"
