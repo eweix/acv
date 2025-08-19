@@ -81,3 +81,34 @@ format, with minor modifications.
     #credit.
   ]
 }
+
+#let preprint(
+  authors: (),
+  title: "",
+  journal: "",
+  archive: "",
+  published: "",
+  status: "",
+  DOI: "",
+) = {
+  // date formatting
+  let date = {
+    if type(published) == datetime {
+      // prefer datetime form
+      published.display("[month repr:long] [day], [year]")
+    } else {
+      // handle string/content form
+      published
+    }
+  }
+
+  // the actual item listed
+  enum.item[
+    #{ if type(authors) == array { authors.enumerate().map(((i, author)) => text(author)).join(", ") } else { authors } }.
+    #title.
+    #emph[#status].
+    Preprint available on #emph[#archive], #date.
+    #{ if DOI != "" [DOI: #link("https://doi.org/" + DOI)[#DOI].] }
+  ]
+}
+
