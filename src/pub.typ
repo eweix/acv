@@ -16,6 +16,8 @@ ACS format, with minor modifications.
   date: "",
   kind: "",
   location: "",
+  DOI: "",
+  show_link: false,
 ) = {
   let credit = (
     { if pages != "" [#pages,] else [] },
@@ -33,6 +35,9 @@ ACS format, with minor modifications.
     // #date.display("[year] [month repr:long] [day]")\;
     #location\;
     #credit.
+    #{
+      if DOI != "" and show_link [DOI: #link("https://doi.org" + DOI)[#DOI]]
+    }
   ]
 }
 
@@ -48,6 +53,8 @@ format, with minor modifications.
   vol: "",
   issue: "",
   pages: "",
+  DOI: "",
+  show_link: false,
 ) = {
   // date formatting
   let date = {
@@ -79,6 +86,9 @@ format, with minor modifications.
     #{ if type(authors) == array { authors.enumerate().map(((i, author)) => text(author)).join(", ") } else { authors } }.
     #title.
     #credit.
+    #{
+      if DOI != "" and show_link [DOI: #link("https://doi.org" + DOI)[#DOI]]
+    }
   ]
 }
 
@@ -90,6 +100,7 @@ format, with minor modifications.
   published: "",
   status: "",
   DOI: "",
+  show_link: false,
 ) = {
   // date formatting
   let date = {
@@ -108,7 +119,9 @@ format, with minor modifications.
     #title.
     #emph[#status].
     Preprint available on #emph[#archive], #date.
-    #{ if DOI != "" [DOI: #link("https://doi.org/" + DOI)[#DOI].] }
+    #{
+      if DOI != "" and show_link [DOI: #link("https://doi.org/" + DOI)[#DOI]]
+    }
   ]
 }
 
