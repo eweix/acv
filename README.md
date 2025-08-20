@@ -15,15 +15,39 @@ These instructions will get you a copy of the project up and running on the typs
 ```typ
 #import "@preview/acv:0.1.0": *
 
-#show acv.with(
+#show cv.with(
   author: "Firstname Lastname",
   location: "Address here",
-  contacts: ((
+  contacts: (
     ("mailto:email@example.com", "email@example.com"),
     ("https://github.com/username", "GitHub: Username"),
     ("https://linkedin.com/link-to-profile", "LinkedIn: Username"),
-)),
+  ),
   updated: datetime.today(),
+)
+
+= Education
+
+#edu(
+  institution: "Some college",
+  degrees: (
+    (degree: "B.Sc.", note: "Physics"),
+  ),
+  date: datetime(year: 2024, month: 05, day: 03),
+  gpa: "4.00",
+)
+
+= Research Experience
+
+#exp(
+  role: "Job Title",
+  org: "Some organization",
+  location: "Place where work took place",
+  start: datetime(year: 2023, month: 10, day: 11),
+  end: "Present",
+  details: [
+    List what you did here in short, compelling sentences.
+  ],
 )
 ```
 
@@ -148,5 +172,4 @@ Please do submit feature requests with additional functions that might be useful
     Summary of the role.
   ],
 )
-
 ```
