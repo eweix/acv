@@ -11,7 +11,7 @@ Presentations section formatting logic
   kind: "",
   location: "",
   DOI: "",
-  show_link: false,
+  show-link: false,
 ) = {
   let credit = (
     { if pages != "" [#pages, ] },
@@ -30,7 +30,7 @@ Presentations section formatting logic
     #location\;
     #credit.
     #{
-      if DOI != "" and show_link [DOI: #link("https://doi.org" + DOI)[#DOI]]
+      if DOI != "" and show-link [DOI: #link("https://doi.org" + DOI)[#DOI]]
     }
   ]
 }

@@ -17,7 +17,7 @@ ACS format, with minor modifications.
   kind: "",
   location: "",
   DOI: "",
-  show_link: false,
+  show-link: false,
 ) = {
   let credit = (
     { if pages != "" [#pages,] else [] },
@@ -36,7 +36,7 @@ ACS format, with minor modifications.
     #location\;
     #credit.
     #{
-      if DOI != "" and show_link [DOI: #link("https://doi.org" + DOI)[#DOI]]
+      if DOI != "" and show-link [DOI: #link("https://doi.org" + DOI)[#DOI]]
     }
   ]
 }
@@ -54,7 +54,7 @@ format, with minor modifications.
   issue: "",
   pages: "",
   DOI: "",
-  show_link: false,
+  show-link: false,
 ) = {
   // date formatting
   let date = {
@@ -87,7 +87,7 @@ format, with minor modifications.
     #title.
     #credit.
     #{
-      if DOI != "" and show_link [DOI: #link("https://doi.org" + DOI)[#DOI]]
+      if DOI != "" and show-link [DOI: #link("https://doi.org" + DOI)[#DOI]]
     }
   ]
 }
@@ -100,7 +100,7 @@ format, with minor modifications.
   published: "",
   status: "",
   DOI: "",
-  show_link: false,
+  show-link: false,
 ) = {
   // date formatting
   let date = {
@@ -120,7 +120,7 @@ format, with minor modifications.
     #emph[#status].
     Preprint available on #emph[#archive], #date.
     #{
-      if DOI != "" and show_link [DOI: #link("https://doi.org/" + DOI)[#DOI]]
+      if DOI != "" and show-link [DOI: #link("https://doi.org/" + DOI)[#DOI]]
     }
   ]
 }
