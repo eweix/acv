@@ -1,8 +1,10 @@
-# The `synthetic-cv` Package
+# The `acv` Package
 
 <div align="center">Version 0.1.0</div>
 
-A resume/curriculum vitae package geared towards the physical sciences and research-based careers.
+A resume/curriculum vitae package and template geared towards the physical sciences and research-based careers.
+Still in early development; releases should not yet be considered stable.
+Be sure to pin the version used to prevent your project from breaking!
 
 Originally modified from [guided-resume-starter-cgc][cgc].
 
@@ -31,7 +33,7 @@ These instructions will get you a copy of the project up and running on the typs
 #edu(
   institution: "Some college",
   degrees: (
-    (degree: "B.Sc.", note: "Physics"),
+    [B.Sc. Physics],
   ),
   date: datetime(year: 2024, month: 05, day: 03),
   gpa: "4.00",
@@ -46,7 +48,7 @@ These instructions will get you a copy of the project up and running on the typs
   start: datetime(year: 2023, month: 10, day: 11),
   end: "Present",
   details: [
-    List what you did here in short, compelling sentences.
+    - List what you did here in bullet points.
   ],
 )
 ```
@@ -81,7 +83,7 @@ Please do submit feature requests with additional functions that might be useful
 
 #edu(
     degrees:(
-    (degree: "B.A.", note: "Finnish Literature"),
+    [B.A. Finnish Literature],
     )
     date: datetime(year: 2025, month: 1, day: 1),
     institution: "Some college",
@@ -97,7 +99,7 @@ Please do submit feature requests with additional functions that might be useful
 #exp(
   role: "Job Title",
   org: "Amazing Inc.",
-  start: "June 2022",
+  start: "June 2022", // or datetime
   end: "Present",
   location: "Cleveland OH, US",
   details: [
@@ -107,7 +109,7 @@ Please do submit feature requests with additional functions that might be useful
 )
 ```
 
-### Papers and Abstracts
+### Papers, preprints, and abstracts
 
 ```typ
 #import "@preview/acv:0.1.0": *
@@ -125,8 +127,46 @@ Please do submit feature requests with additional functions that might be useful
   journal: "Prestigious Journal",
 )
 
+#preprint(
+  authors: (
+    [Firstname Lastname],
+    [Second Author],
+    [Another Author],
+  ),
+  title: "Preprint title",
+  published: datetime(year: 2025, month: 3, day: 21),
+  archive: "bioRxiv",
+  DOI: "doi",
+  status: "Submitted",
+)
 
 #abstract(
+  authors: (
+    [Firstname Lastname],
+    [Second Author],
+    [Another Author],
+  ),
+  number: 1153,
+  pages: "p 160",
+  title: "A super cool title for an awesome poster",
+  conference: "Totally legitimate conference",
+  date: datetime(year: 2025, month: 4, day: 25),
+  location: "Some town",
+  kind: "",
+)
+```
+
+> [!TIP]
+> To bold your name in a publication or presentation list, use a show rule:
+>
+> ```typ
+> #show regex("Firstname Lastname"): name => text(weight: "bold", name)
+> ```
+
+### Presentations
+
+```typ
+#pres(
   authors: (
     [Firstname Lastname],
     [Second Author],
@@ -143,6 +183,7 @@ Please do submit feature requests with additional functions that might be useful
 
 ```
 
+
 ### Awards
 
 ```typ
@@ -158,6 +199,7 @@ Please do submit feature requests with additional functions that might be useful
 )
 ```
 
+
 ### Service
 
 ```typ
@@ -172,4 +214,11 @@ Please do submit feature requests with additional functions that might be useful
     Summary of the role.
   ],
 )
+```
+
+
+### Skills
+
+```typ
+
 ```
