@@ -1,9 +1,3 @@
-#import "cv.typ": *
-#import "edu.typ": *
-#import "exp.typ": *
-#import "skills.typ": *
-#import "award.typ": *
-#import "pub.typ": *
-#import "pres.typ": *
-#import "hide.typ": *
-#import "proj.typ": *
+#import "core.typ": award, cv, edu, exp, ser, skills
+#import "bib.typ": abstract, paper, preprint, pres
+#import "extra.typ": hide, proj
