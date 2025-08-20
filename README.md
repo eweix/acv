@@ -1,4 +1,4 @@
-# The `acv` Package
+# The `synthetic-cv` Package
 
 <div align="center">Version 0.1.0</div>
 
@@ -15,13 +15,13 @@ These instructions will get you a copy of the project up and running on the typs
 ```typ
 #import "@preview/acv:0.1.0": *
 
-#show cv.with(
+#show: cv.with(
   author: "Firstname Lastname",
   location: "Address here",
   contacts: (
-    ("mailto:email@example.com", "email@example.com"),
-    ("https://github.com/username", "GitHub: Username"),
-    ("https://linkedin.com/link-to-profile", "LinkedIn: Username"),
+    [#link("mailto:youremail@email.com")[youremail\@email.com]],
+    [#link("https://github.com/user")[gh/user]],
+    [#link("https://www.linkedin.com/in/user/")[in/user]],
   ),
   updated: datetime.today(),
 )
