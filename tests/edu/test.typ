@@ -5,7 +5,7 @@
 
 // passing without gpa should be allowed
 #acv.edu(
-  degrees: ((degree: "Bachelor's of Arts", note: "Mathematics"), (degree: "Minor", note: "Art")),
+  degrees: ([B.A. Mathematics], [Minor in Art]),
   date: datetime(year: 2025, month: 1, day: 1),
   institution: "Some college",
   location: "Some city",

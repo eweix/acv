@@ -1,5 +1,4 @@
-
-#import "@preview/acv:0.1.0"
+#import "@preview/acv:0.1.0": *
 
 #show: cv.with(
   author: "Jacky Cao",
@@ -19,7 +18,7 @@
   location: "Cambridge MA, US",
   gpa: "3.97",
   degrees: (
-    (degree: "Ph.D.", note: "Physics"),
+    [Ph.D. Physics],
   ),
   date: datetime(year: 2023, month: 4, day: 28),
 )
@@ -29,7 +28,7 @@
   location: "Wellesley MA, US",
   gpa: "4.00",
   degrees: (
-    (degree: "B.A.", note: "Psychology & Physics"),
+    [B.A. Psychology & Physics],
   ),
   date: datetime(year: 2017, month: 5, day: 14),
 )
