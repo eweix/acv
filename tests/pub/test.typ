@@ -1,10 +1,10 @@
-#import "/src/lib.typ" as acv
+#import "/src/lib.typ" as gloat
 
 // should pass without parameters
-#acv.paper()
+#gloat.paper()
 
 // should work with one author
-#acv.paper(
+#gloat.paper(
   published: datetime(year: 2025, month: 1, day: 1),
   title: "A very impressive paper",
   authors: "Single Author",
@@ -14,8 +14,7 @@
   journal: "Prestigious Journal",
 )
 
-// should work with multiple authors
-#acv.paper(
+#gloat.paper(
   authors: (
     [Firstname Lastname],
     [Corresponding Author],
@@ -28,26 +27,22 @@
   journal: "Prestigious Journal",
 )
 
-// should show no parenthesis without issue
-#acv.paper(
+#gloat.preprint(
   authors: (
     [Firstname Lastname],
     [Corresponding Author],
   ),
   published: datetime(year: 2025, month: 1, day: 1),
   title: "A very impressive paper",
-  vol: "12",
-  pages: "355-372",
   journal: "Prestigious Journal",
 )
 
-// should only show journal and date if no volume/pages/issue
-#acv.paper(
+#gloat.abstract(
   authors: (
     [Firstname Lastname],
     [Corresponding Author],
   ),
-  published: datetime(year: 2025, month: 1, day: 1),
+  date: datetime(year: 2025, month: 1, day: 1),
   title: "A very impressive paper",
-  journal: "Prestigious Journal",
+  conference: "Prestigious Journal",
 )

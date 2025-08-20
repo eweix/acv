@@ -1,7 +1,7 @@
-#import "/src/lib.typ" as acv
+#import "/src/lib.typ" as gloat
 
 // should pass with strings or datetime for start/end dates
-#acv.exp(
+#gloat.exp(
   role: "Jobname",
   org: "Institution",
   start: datetime(year: 2022, month: 6, day: 7),

@@ -1,10 +1,10 @@
-#import "/src/lib.typ" as acv
+#import "/src/lib.typ" as gloat
 
 // passing with nothing should return nothing
-#acv.edu()
+#gloat.edu()
 
 // passing without gpa should be allowed
-#acv.edu(
+#gloat.edu(
   degrees: ([B.A. Mathematics], [Minor in Art]),
   date: datetime(year: 2025, month: 1, day: 1),
   institution: "Some college",
@@ -12,7 +12,7 @@
 )
 
 // should be allowed to pass empty degree
-#acv.edu(
+#gloat.edu(
   date: datetime(year: 2025, month: 1, day: 1),
   gpa: "4.00",
   institution: "Some college",

@@ -1,12 +1,12 @@
-#import "/src/lib.typ" as acv
+#import "/src/lib.typ" as gloat
 
 // cv should pass when called without arguments
-#acv.cv.with()
+#gloat.cv.with()
 
 // cv should pass when shown with full contacts
-#show: acv.cv.with(
+#show: gloat.cv.with(
   author: "Jacky Cao",
-  location: "Cleveland OH, US",
+  address: "Cleveland OH, US",
   contacts: (
     [#link("mailto:email@domain")[email\@domain]],
     [#link("your-website-url")[personal website]],

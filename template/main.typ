@@ -1,8 +1,8 @@
-#import "@preview/acv:0.1.0": *
+#import "@preview/gloat:0.1.0": *
 
 #show: cv.with(
   author: "Jacky Cao",
-  location: "Chicago IL, US",
+  address: "Chicago IL, US",
   contacts: (
     [#link("mailto:email@domain")[jcao\@uchicago.edu]],
     [#link("your-website-url")[jc.ao]],
