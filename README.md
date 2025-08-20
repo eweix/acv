@@ -25,7 +25,7 @@ These instructions will get you a copy of the project up and running on the typs
 
 #show: cv.with(
   author: "Firstname Lastname",
-  location: "Address here",
+  address: "Address here",
   contacts: (
     [#link("mailto:youremail@email.com")[youremail\@email.com]],
     [#link("https://github.com/user")[gh/user]],
@@ -223,5 +223,25 @@ Please do submit feature requests with additional functions that might be useful
 ### Skills
 
 ```typ
+#import "@preview/gloat:0.1.0": *
 
+#skills((
+  (
+    "Expertise",
+    (
+      [Systems Biology],
+      [Signal Processing],
+      [MinDE System],
+    ),
+  ),
+  (
+    "Software",
+    (
+      [Docker],
+      [git],
+      [Typst],
+      [LaTeX],
+    ),
+  ),
+))
 ```
