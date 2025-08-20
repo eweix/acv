@@ -1,4 +1,4 @@
-# The `acv` Package
+# The `gloat` Package
 
 <div align="center">Version 0.1.0</div>
 
@@ -10,12 +10,18 @@ Originally modified from [guided-resume-starter-cgc][cgc].
 
 [cgc]: https://typst.app/universe/package/guided-resume-starter-cgc
 
+![
+Example CV created using the `gloat` package. 
+It has a header with the author name, address, and contact information. 
+It also has sections detailing education, research experience, publications, and awards.
+](thumbnail.png)
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on the typst web app.
 
 ```typ
-#import "@preview/acv:0.1.0": *
+#import "@preview/gloat:0.1.0": *
 
 #show: cv.with(
   author: "Firstname Lastname",
@@ -58,15 +64,15 @@ These instructions will get you a copy of the project up and running on the typs
 To install the latest release of this package from preview, use the `import` function:
 
 ```typ
-#import "@preview/acv:0.1.0": *
+#import "@preview/gloat:0.1.0": *
 ```
 
 Alternatively, the package can be cloned and installed locally from github.
 This will allow you to make edits to the package if you so desire.
 
 ```sh
-$ git clone https://github.com/eweix/acv
-$ cd acv
+$ git clone https://github.com/eweix/gloat
+$ cd gloat
 $ /bin/bash ./scripts/package @local
 ```
 
@@ -79,7 +85,7 @@ Please do submit feature requests with additional functions that might be useful
 ### Degrees/Education
 
 ```typ
-#import "@preview/acv:0.1.0": *
+#import "@preview/gloat:0.1.0": *
 
 #edu(
     degrees:(
@@ -94,7 +100,7 @@ Please do submit feature requests with additional functions that might be useful
 ### Experience
 
 ```typ
-#import "@preview/acv:0.1.0": *
+#import "@preview/gloat:0.1.0": *
 
 #exp(
   role: "Job Title",
@@ -112,7 +118,7 @@ Please do submit feature requests with additional functions that might be useful
 ### Papers, preprints, and abstracts
 
 ```typ
-#import "@preview/acv:0.1.0": *
+#import "@preview/gloat:0.1.0": *
 
 #paper(
   authors: (
@@ -183,11 +189,10 @@ Please do submit feature requests with additional functions that might be useful
 
 ```
 
-
 ### Awards
 
 ```typ
-#import "@preview/acv:0.1.0": *
+#import "@preview/gloat:0.1.0": *
 
 #award(
   name: "Name of the award",
@@ -199,11 +204,10 @@ Please do submit feature requests with additional functions that might be useful
 )
 ```
 
-
 ### Service
 
 ```typ
-#import "@preview/acv:0.1.0": *
+#import "@preview/gloat:0.1.0": *
 
 #ser(
   role: "Role",
@@ -215,7 +219,6 @@ Please do submit feature requests with additional functions that might be useful
   ],
 )
 ```
-
 
 ### Skills
 

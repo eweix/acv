@@ -32,7 +32,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- Describe the feature set of the initial release here -->
 
-The following functions are included in the original `acv` package:
+The following functions are included in the original `gloat` package:
 
 - The `cv` function creates a header with name and contact information.
 - The `edu` function displays formatted degrees for an education section.
@@ -46,8 +46,6 @@ The following functions are included in the original `acv` package:
 - The `pres` function formats an entry for a conference presentation in the ACS style.
 
 The initial release also includes a template for getting started.
-The template includes example education, research experience, and publication sections.
-Further functions and sections are outlined in the README.
 
 <!--
 Below are the target URLs for each version
@@ -56,5 +54,5 @@ to the corresponding tag on GitHub, or the diff
 in comparison to the previous release
 -->
 
-[Unreleased]: https://github.com/eweix/acv/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/eweix/acv/releases/tag/v0.1.0
+[Unreleased]: https://github.com/eweix/gloat/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/eweix/gloat/releases/tag/v0.1.0

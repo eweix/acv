@@ -7,10 +7,10 @@ default:
   @just --list --unsorted
 
 # generate manual
-# doc:
-#   typst compile docs/manual.typ docs/manual.pdf
-#   typst compile docs/thumbnail.typ thumbnail-light.svg
-#   typst compile --input theme=dark docs/thumbnail.typ thumbnail-dark.svg
+doc:
+  typst compile docs/manual.typ docs/manual.pdf
+  # typst compile docs/thumbnail.typ thumbnail-light.svg
+  # typst compile --input theme=dark docs/thumbnail.typ thumbnail-dark.svg
 
 # run test suite
 test *args:
@@ -39,6 +39,10 @@ uninstall: (remove "@local")
 
 # uninstalls the library from the "@preview" prefix (for pre-release testing)
 uninstall-preview: (remove "@preview")
+
+thumbnail:
+  typst compile -f png --pages 1 --ppi 250 template/main.typ thumbnail.png
+  oxipng -o 4 --strip safe --alpha thumbnail.png
 
 # run ci suite
 ci: test
